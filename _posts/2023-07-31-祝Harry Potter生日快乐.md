@@ -1,6 +1,6 @@
 ---
 layout：post
-title：祝Harry Potter生日快乐
+title: 祝Harry Potter生日快乐
 date: 2023-07-31 16:07:31
 author: Failure
 header-img: img/the-first.png
