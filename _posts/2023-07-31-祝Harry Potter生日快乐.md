@@ -11,14 +11,12 @@ tags:
 
 7月31日是“大难不死的男孩”哈利·波特的生日，这个特别的日子是一切的开始。在此，由衷地祝愿我们的英雄，生日快乐！
  
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>评论</title>
+    <title>Simple Comment System</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,7 +65,6 @@ tags:
             }
         }
     </script>
-\```
 </body>
 </html>
 
