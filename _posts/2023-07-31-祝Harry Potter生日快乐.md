@@ -16,7 +16,7 @@ tags:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Comment System</title>
+    <title>评论</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,15 +38,15 @@ tags:
     </style>
 </head>
 <body>
-    <h1>Simple Comment System</h1>
+    <h1>评论</h1>
     <div class="comment-form">
-        <label for="nickname">Nickname:</label>
+        <label for="nickname">昵称:</label>
         <input type="text" id="nickname" required>
         <br>
-        <label for="email">Email:</label>
+        <label for="email">邮箱:</label>
         <input type="email" id="email" required>
         <br>
-        <button onclick="submitComment()">Submit Comment</button>
+        <button onclick="submitComment()">评论</button>
     </div>
     <div id="comments"></div>
 
