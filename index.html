@@ -3,6 +3,22 @@ layout: page
 description: "拒绝内卷，健康生活"
 ---
 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub 个人网站评论</title>
+    <style>
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -40,3 +56,43 @@ description: "拒绝内卷，健康生活"
     {% endif %}
 </ul>
 {% endif %}
+
+     <h2>GitHub 个人网站评论</h2>
+    <form id="commentForm">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="email">邮箱：</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="commentText">评论内容：</label>
+        <textarea id="commentText" rows="4" cols="50" required></textarea>
+        <br>
+        <button type="submit">提交评论</button>
+    </form>
+    <h2>评论列表：</h2>
+    <div id="commentList"></div>
+
+    <!-- 将JavaScript代码放在此处 -->
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const commentText = document.getElementById('commentText').value;
+
+            const comment = document.createElement('div');
+            comment.className = 'comment';
+            comment.innerHTML = `<strong>${username} (${email})：</strong> ${commentText}`;
+
+            document.getElementById('commentList').appendChild(comment);
+
+            document.getElementById('username').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('commentText').value = '';
+        });
+    </script>
+</body>
+</html>
+
